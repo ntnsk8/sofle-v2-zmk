@@ -9,12 +9,17 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-// Override para PCB Josef Adamčík + SuperMini NRF52840 (Digalai)
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
 &kscan0 {
     row-gpios
         = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 0 (Etiqueta 024)
         , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 1 (Etiqueta 100 - ESC)
-        , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 2 (Etiqueta 011)
+        , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 2 (Etiqueta 011 - TAB)
         , <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 3 (Etiqueta 104)
         , <&gpio1 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Linha 4 (Etiqueta 106)
         ;
