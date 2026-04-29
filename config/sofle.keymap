@@ -14,20 +14,6 @@
     chosen { zmk,kscan = &kscan0; };
 };
 
-&kscan0 {
-    row-gpios =
-        <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-        // Linha 0 (Etiqueta 024),
-        <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-        // Linha 1 (Etiqueta 100 - ESC),
-        <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-        // Linha 2 (Etiqueta 011 - TAB),
-        <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-        // Linha 3 (Etiqueta 104),
-        <&gpio1 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-        // Linha 4 (Etiqueta 106);
-};
-
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
